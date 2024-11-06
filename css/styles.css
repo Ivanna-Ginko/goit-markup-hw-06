@@ -252,16 +252,6 @@ a {
 /*------------MAIN-----------*/
  /*------------section-one-----------*/
  
-@media screen and (min-resolution:192dpi) {
-  .section-one {
-    background-color: #2E2F42; 
-    background-image: linear-gradient
-      (rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)), url(../images/people-office_mob@2x.jpg);
-
-  }
-}
-
  .section-one {
   background-color: #2E2F42; 
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_mob.jpg);
@@ -273,6 +263,16 @@ a {
   margin: 0 auto;
 }
  
+@media screen and (min-resolution:192dpi) {
+  .section-one {
+    background-color: #2E2F42; 
+    background-image: linear-gradient
+      (rgba(46, 47, 66, 0.7), 
+      rgba(46, 47, 66, 0.7)), url(../images/people-office_mob@2x.jpg);
+
+  }
+}
+
 .page-title {
 max-width: 216px;
 color: #FFFFFF;
@@ -495,11 +495,6 @@ position: relative;
 overflow: hidden;
 }
 
-.portfolio-img {
-height: 300px;
-width: 360px;
-}
-
 .portfolio-nametext {
 border-bottom: 1px solid #e7e9fc;
 border-left: 1px solid #e7e9fc;
@@ -545,14 +540,18 @@ padding: 32px 16px;
  /*---------- FOOTER ------------*/
 
  .footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 72px;
-  justify-content: center;
+  
   padding-top: 96px;
   padding-bottom: 96px;
   background-color: #2E2F42;  
   margin: 0 auto; 
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  justify-content: center;
 }
 
 .logo-text {
@@ -679,7 +678,6 @@ color: #ffffff;
  justify-content: center;
  align-items: center;
  border-radius: 4px;
- padding: 8px 24px;
  max-width: 165px; 
  height: 40px;
  font-weight: 500;
@@ -687,7 +685,6 @@ color: #ffffff;
  line-height: 150%;
  letter-spacing: 0.04em;
  color: #FFFFFF;
- margin: 8px auto;
  background-color: #4D5AE5;
  cursor: pointer;
  border: none;
@@ -1070,20 +1067,25 @@ border-color: #4D5AE5;
 /*----------- SECTION ONE -------------*/
 
 
+
+
+
+.section-one {
+  background-color: #2E2F42; 
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+  rgba(46, 47, 66, 0.7)), 
+  url(../images/people-office_tablet.jpg);
+}
+
 @media screen and (min-resolution:192dpi) {
   .section-one {
     background-color: #2E2F42; 
     background-image: linear-gradient
       (rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)), url(../images/people-office_tablet@2x.jpg);
-
+      rgba(46, 47, 66, 0.7)), 
+      url(../images/people-office_tablet@2x.jpg);
   }
-}
-
-.section-one {
-  background-color: #2E2F42; 
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_tablet.jpg);
-}
+  }
 
 .section-one {
   padding: 112px 0 112px;
@@ -1150,7 +1152,9 @@ row-gap: 72px;
 
 /*---------- FOOTER ------------*/
 
-.footer {
+
+
+.footer-flex {
   padding: 96px 148px 96px 92px;
   gap: 72px 24px;
   align-items: baseline;
@@ -1176,15 +1180,18 @@ row-gap: 72px;
   flex-direction: row;
   gap: 24px;
   align-items: baseline;
+  
 }
 
 .footer-btn {
-  margin: 16px 0 24px 0;
+ margin-left: 24px; 
 }
+
 
 .modal {
   width: 408px;
   min-height: 584px;
+  
 }
 
   }
@@ -1225,6 +1232,11 @@ align-items: center;
   margin-right: 0;
 }
 
+.address {
+  display: block;
+  font-style: normal;
+}
+
 .list-address {
 display: flex;
 flex-direction: row;
@@ -1251,25 +1263,25 @@ letter-spacing: 0.02em;
 
 /*-------------------MAIN----------------*/
 
+.section-one {
+  background-color: #2E2F42; 
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
+  rgba(46, 47, 66, 0.7)), 
+  url(../images/people-office.jpg);
+}
+
 @media screen and (min-resolution:192dpi) {
   .section-one {
     background-color: #2E2F42; 
     background-image: linear-gradient
       (rgba(46, 47, 66, 0.7), 
       rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
-
   }
-}
-
-.section-one {
-  background-color: #2E2F42; 
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
 }
 
 .section-one {
   padding: 188px 0 188px 0; 
   max-width: 1158px;
- 
 }
 
 .page-title {
@@ -1308,13 +1320,29 @@ margin: 0 auto;
 
 .corporate-values-list {
   flex-wrap: nowrap;
-  row-gap: 24px;
+  gap: 24px;
   margin: 0;
   }
   
+  .corporate-values-name {
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+
   .corporate-values-item {
     width: calc((100% - 24px - 24px - 24px) / 4);
   }
+
+  .corporate-values-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  }
+
 
 /*------------section-Our-Team-----------*/
 
@@ -1349,18 +1377,23 @@ margin: 0 auto;
 /*--------------- FOOTER -----------------*/
 
 .footer {
+  padding-bottom: 100px;
+  padding-top: 120px;
+}
+
+.footer-flex {
   flex-wrap: nowrap;
   align-items: baseline;
-  padding-bottom: 100px;
-  padding-top: 120px;
   gap: unset;
-  padding-bottom: 100px;
-  padding-top: 120px;
 }
 
 .logo-text {
  margin-right: 120px;
  min-width: 264px;
+}
+
+.footer-text-title {
+  text-align: left;
 }
 
 .logo-footer {
@@ -1387,7 +1420,15 @@ text-align: left;
  flex-direction: row;
  align-items: baseline;
  gap: 24px;
- margin-bottom: 16px;
+}
+
+.footer-paragraph {
+  text-align: left;
+}
+
+.footer-btn {
+  min-width: 165px;
+  min-height: 40px;
 }
 
 .footer-input {
@@ -1397,5 +1438,4 @@ text-align: left;
   padding-left: 16px;
 
 }
-
 }
